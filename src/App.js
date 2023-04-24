@@ -6,6 +6,9 @@ import { ProvedorTema } from "./componentes/ProvedorTema/ProvedorTema";
 import { Tipografia } from "./componentes/Tipografia/Tipografia";
 import { Botao } from "./componentes/Botao/Botao";
 import { ListaSuspensa } from "./componentes/ListaSuspensa/ListaSuspensa";
+import { Cabecalho } from "./componentes/Cabecalho/Cabecalho";
+import { Link } from "./componentes/Link/Link";
+import { FreelandoLogo } from "./componentes/Icones/FreelandoLogo";
 
 const estadosBrasileiros = [
   { "text": "Acre", "value": "AC" },
@@ -41,9 +44,21 @@ function App() {
   return (
     <ProvedorTema>
       <Estilos />
-      <Container style={{margin: '80px 0px'}}>
+      <Cabecalho style={{ height: '104px' }}>
+        <Container>
+          <Row align="center">
+            <Col style={{marginTop: '20px'}}>
+              <FreelandoLogo />
+            </Col>
+            <Col style={{ textAlign: 'right', marginTop: '20px' }}>
+              <Link>Login</Link>
+            </Col>
+          </Row>
+        </Container>
+      </Cabecalho>
+      {/* <Container style={{m */}
         <Row justify="center">
-          <Col lg={6} md={8} sm={12}>
+          <Col xxx={6} xxl={6} xl={6} lg={6} md={8} sm={12} style={{ margin: '80px 0'}}>
             <Card>
               <Tipografia variante="h1" componente="h1">
                 Freelando
@@ -92,7 +107,7 @@ function App() {
             </Card>
           </Col>
         </Row>
-      </Container>
+      {/* </Container> */}
     </ProvedorTema>
   );
 }
