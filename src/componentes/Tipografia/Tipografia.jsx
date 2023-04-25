@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 const componentes = {
   h1: "h1",
   body: "p",
+  legenda: "p"
 };
 
 const estilos = {
@@ -16,6 +17,11 @@ const estilos = {
     font-size: 20px;
     line-height: 24px;
 `,
+  legenda: `
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+`
 }
 
 export const Tipografia = ({ variante, componente, children }) => {

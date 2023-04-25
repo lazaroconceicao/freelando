@@ -9,6 +9,13 @@ import { ListaSuspensa } from "./componentes/ListaSuspensa/ListaSuspensa";
 import { Cabecalho } from "./componentes/Cabecalho/Cabecalho";
 import { Link } from "./componentes/Link/Link";
 import { FreelandoLogo } from "./componentes/Icones/FreelandoLogo";
+import { Rodape } from "./componentes/Rodape/Rodape";
+import { ListaInline } from "./componentes/Lista/ListaInline";
+import { ItemListaInline } from "./componentes/Lista/ItemListaInline";
+import { IconeWhatsApp } from "./componentes/Icones/IconeWhatsApp";
+import { IconeTwitch } from "./componentes/Icones/IconeTwitch";
+import { IconeTwitter } from "./componentes/Icones/IconeTwitter";
+import { IconeInstagram } from "./componentes/Icones/IconeInstagram";
 
 const estadosBrasileiros = [
   { "text": "Acre", "value": "AC" },
@@ -108,6 +115,41 @@ function App() {
           </Col>
         </Row>
       {/* </Container> */}
+      <Rodape style={{height: '172px'}}>
+        <Container>
+          <Row>
+            <Col style={{marginTop: '40px'}}>
+            <FreelandoLogo width={176} height={40} />
+            <Tipografia variante="legenda" componente="legenda">Desenvolvido José Lázaro. Projeto fictício sem fins comerciais.</Tipografia>
+            </Col>
+            <Col style={{textAlign: 'right', marginTop: '40px'}}>
+            <Tipografia variante="legenda" componente="legenda">Acesse nossas redes:</Tipografia>
+            <ListaInline>
+              <ItemListaInline>
+                <a href="Link para WhatsApp">
+                  <IconeWhatsApp />
+                </a>
+              </ItemListaInline>
+              <ItemListaInline>
+                <a href="Link para Twitch">
+                  <IconeTwitch />
+                </a>
+              </ItemListaInline>
+              <ItemListaInline>
+                <a href="Link para Instagram">
+                  <IconeInstagram />
+                </a>
+              </ItemListaInline>
+              <ItemListaInline>
+                <a href="Link para Twitter">
+                  <IconeTwitter />
+                </a>
+              </ItemListaInline>
+            </ListaInline>
+            </Col>
+          </Row>
+        </Container>
+      </Rodape>
     </ProvedorTema>
   );
 }
